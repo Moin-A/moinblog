@@ -1,0 +1,64 @@
+<!-- app/views/member_details/edit.html.erb -->
+
+<!-- Your form or other content here -->
+<div class="container-md">
+        <div class="row">
+         
+          <div class="col-10 col-md-10 m-auto">
+
+            <!-- Card -->
+            <div class="card card-bleed shadow-light-lg mb-6">
+              <div class="card-header">
+
+                <!-- Heading -->
+                <h4 class="mb-0">
+                  Basic Information
+                </h4>
+
+              </div>
+              <div class="card-body">
+                <%= form_for @member, url: member_detail_path, method: :put do |f| %>
+                      <div class="row">                   
+                        <div class="form-group col-6">
+                          <%= f.label :status %>
+                          <%= f.select :status, [["Active", "active"], ["Inactive", "inactive"]], {}, class: "form-control" %>
+                        </div>
+                         <div class="form-group  col-6">
+                            <%= f.label :role %>
+                            <%= f.select :role, [["Guest", "guest"], ["Author", "author"], ["SuperAdmin", "superadmin"]], {}, class: "form-control" %>
+                         </div>
+                       
+                        <div class="form-group   col-6 ">                                                                                             
+                          <div  class="col py-2">
+                            <%= f.label :social_media_links, 'Social Media Link' %>                            
+                            <%= f.text_field :social_media_links, class: 'form-control' %>
+                          </div>                                                                                                                                             
+                            <div class="field my-2">
+                            <%if avatar_helper(@member)%>
+                             <span><%=link_to avatar_helper(@member), @member&.avatar&.url&.split("?")&.first||gravatar_url  %></span>
+                            <%end%> 
+                            <div>
+                           
+                            </div> 
+                            <%= f.label :avatar, 'Avatar',class: "" %>
+                            <%= f.file_field :avatar %>
+                          </div>
+                         <div class="form-group  col-12">
+                            <%= f.label :biography %>
+                            <%= f.text_area :biography, class: "form-control"    %>
+                         </div>
+                         
+                         </div>  
+                            <div class="actions">
+                            <%= f.submit "Submit", class: "btn btn-primary" %>
+                            </div>    
+                         </div>                                                                         
+                        </div>
+                  <!-- Add more form fields for other attributes as needed -->
+                 
+                <% end %>
+              </div>
+            </div>  
+          </div>
+        </div> <!-- / .row -->
+      </div>
