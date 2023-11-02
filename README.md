@@ -25,19 +25,16 @@ Welcome to CreativeMoin! This Rails application is designed to provide a seamles
    ```
    git clone [repository_url.git]
    ```
-2. **Navigate to the Project Directory:**
-   ```
-   cd CreativeMoin
-   ```
-3. **Install Dependencies:**
+
+2. **Install Dependencies:**
    ```
    bundle install
    ```
-4. **Database Setup:**
+3. **Database Setup:**
    ```
    rails db:create db:migrate
    ```
-5. **Start the Server:**
+4. **Start the Server:**
    ```
    rails server
    ```
@@ -47,11 +44,29 @@ Welcome to CreativeMoin! This Rails application is designed to provide a seamles
 
 The following environment variables are used in CreativeMoin. Make sure to set them up in your environment before running the application:
 
-- **`DATABASE_URL`**: URL for the database connection.
-- **`SECRET_KEY_BASE`**: Secret key for encrypting session data.
-- **`SENDGRID_API_KEY`**: API key for sending transactional emails via SendGrid.
-- **`AWS_ACCESS_KEY_ID`** and **`AWS_SECRET_ACCESS_KEY`**: Credentials for Amazon S3 storage (if applicable).
-- **`OTHER_ENV_VARIABLES`**: Describe any additional environment variables specific to your application.
+Certainly! Here's a description for the provided variables:
+
+- **`access_key_id`**: Access key ID used for authentication with cloud services or APIs.
+- **`ALLOWED_FRONTEND_HOSTS`**: List of frontend hosts allowed to access the backend server.
+- **`BACKEND_HOST_NAME`**: Host name of the backend server.
+- **`bucket`**: Name of the storage bucket where files or data are stored.
+- **`CORS_ORIGIN`**: Allowed origins for Cross-Origin Resource Sharing (CORS) requests.
+- **`DATABASE_URL`**: URL for connecting to the application's database.
+- **`google_client_id`**: Client ID for authenticating with Google services or APIs.
+- **`google_client_secret`**: Client secret for authenticating with Google services or APIs.
+- **`HOST`**: Hostname or IP address where the application is running.
+- **`HOST_URL`**: URL of the host server where the application is deployed.
+- **`REDIS_URL`**: URL for connecting to the Redis server, used for caching or message queue.
+- **`region`**: Geographic region for cloud services (e.g., AWS region).
+- **`secret_access_key`**: Secret access key used in combination with access key ID for authentication.
+- **`SECRET_KEY_BASE`**: Secret key used for various encryption purposes, such as session data encryption.
+- **`SMTP_ADDRESS`**: Address of the SMTP server for sending email notifications.
+- **`SMTP_DOMAIN`**: Domain associated with the SMTP server.
+- **`SMTP_PASSWORD`**: Password used to authenticate with the SMTP server.
+- **`SMTP_USER_NAME`**: Username or email address used to authenticate with the SMTP server.
+- **`KEY`**: Generic variable name, please provide specific context or rename it for clarity.
+  
+Note: It's important to provide meaningful and specific variable names to avoid confusion and ensure clarity in your application's configuration.
 
 Ensure these environment variables are securely stored and managed, especially in production environments.
 
@@ -83,3 +98,7 @@ This project is licensed under the [Your License] - see the [LICENSE.md](LICENSE
 ---
 
 Make sure to provide clear descriptions for each environment variable and its purpose in your application. This will help users and developers understand the configurations required for the app to function correctly.
+
+
+
+
